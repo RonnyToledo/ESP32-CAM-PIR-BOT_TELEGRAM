@@ -29,19 +29,37 @@ Bot educativo de Telegram desarrollado con ESP32, diseñado para aprender sobre 
 
 ## Configuración
 
-1. **Configurar la API de Telegram:**
-   * Crear un bot con `BotFather` en Telegram
-   * Obtener el token del bot y el ID del usuario autorizado
+### Paso 1: Crear un bot de Telegram
+1. Abre Telegram y busca `BotFather`
+2. Usa el comando `/newbot` para crear un bot
+3. Proporciona un nombre y un usuario para el bot
+4. Copia y guarda el token generado
 
-2. **Configurar Arduino IDE:**
-   * Instalar el soporte para ESP32 desde el gestor de tarjetas
-   * Descargar e instalar las librerías necesarias desde el gestor de librerías
+### Paso 2: Obtener tu ID de usuario
+1. Busca `IDBot` en Telegram
+2. Usa el comando `/getid` para obtener tu ID de usuario
+3. Guarda este ID para configurarlo en el código
 
-3. **Definir credenciales en el código:**
-   * Reemplazar las variables del código con:
-      * Credenciales de la red WiFi
-      * Token del bot
-      * ID de usuario autorizado
+### Paso 3: Configurar Arduino IDE
+1. **Agregar soporte para ESP32**:
+   * Ve a **Archivo > Preferencias** y agrega este enlace en "URL de gestor de tarjetas adicionales":
+     ```
+     https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+     ```
+   * Ve a **Herramientas > Placa > Gestor de tarjetas** y busca `esp32`
+   * Instala el paquete para ESP32
+
+2. **Instalar librerías necesarias**:
+   * Abre **Herramientas > Gestor de librerías**
+   * Busca e instala **Universal Telegram Bot Library** desde [GitHub](https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot)
+   * Verifica la instalación de la librería WiFi (incluida con ESP32)
+
+### Paso 4: Configurar credenciales en el código
+1. Abre el archivo `.ino` del proyecto en Arduino IDE
+2. Reemplaza las siguientes variables:
+   * `WIFI_SSID` y `WIFI_PASSWORD` con credenciales de tu red WiFi
+   * `TELEGRAM_BOT_TOKEN` con el token de tu bot
+   * `AUTHORIZED_USER_ID` con tu ID de usuario de Telegram
 
 ## Instalación
 
@@ -55,13 +73,19 @@ git clone https://github.com/tu-usuario/esp32-telegram-bot.git
 ## Uso
 
 1. **Subir el código a la placa ESP32:**
-   * Conectar la placa al ordenador mediante USB
-   * Seleccionar la placa ESP32 y el puerto en Arduino IDE
-   * Compilar y subir el código
+   * Conecta la placa al ordenador mediante USB
+   * Selecciona la placa ESP32 y el puerto en Arduino IDE
+   * Compila y sube el código
 
-2. **Ejecutar el bot de Telegram:**
-   * Iniciar el bot desde la app de Telegram
-   * Enviar comandos como `/encender` o `/apagar` para controlar el dispositivo
+2. **Iniciar el bot de Telegram:**
+   * Abre tu bot desde la app de Telegram
+   * Envía comandos como `/encender` o `/apagar`
+
+## Librería Universal Telegram Bot
+
+* **Repositorio**: [Universal-Arduino-Telegram-Bot](https://github.com/witnessmenow/Universal-Arduino-Telegram-Bot)
+* **Descripción**: Librería para integrar bots de Telegram en proyectos de Arduino
+* **Instalación**: Disponible en el Gestor de Librerías de Arduino o mediante descarga directa desde GitHub
 
 ## Aprendizaje
 
