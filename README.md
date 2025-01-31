@@ -1,5 +1,8 @@
 # ESP32 Telegram Bot 🤖🌐
 
+[![Tutorail de conexiones](https://img.youtube.com/vi/6V0s_6FMEho/0.jpg)](https://www.youtube.com/watch?v=6V0s_6FMEho)
+
+
 ## Descripción
 
 Bot educativo de Telegram desarrollado con ESP32, diseñado para aprender sobre programación de microcontroladores e integración de servicios de mensajería. Ideal para proyectos de iniciación en IoT y automatización.
